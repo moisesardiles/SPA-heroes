@@ -9,17 +9,17 @@ import { HeroesService } from '../../servicios/heroes.services';
 })
 export class HeroeComponent {
 
-    heroe: any = {};
+  heroe: any = {};
 
-  constructor( private activateRoute: ActivatedRoute,
-               // tslint:disable-next-line: variable-name
-               private _heroesService: HeroesService
-    ) {
+  constructor(private activateRoute: ActivatedRoute,
+    // tslint:disable-next-line: variable-name
+    private _heroesService: HeroesService
+  ) {
 
-    this.activateRoute.params.subscribe( params => {
+    this.activateRoute.params.subscribe(params => {
       // tslint:disable-next-line: no-string-literal
-      this.heroe = this._heroesService.getHeroe( params['id'] );
-    } );
+      this.heroe = this._heroesService.getHeroe(params['id']);
+    });
 
   }
 

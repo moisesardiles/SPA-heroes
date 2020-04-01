@@ -15,10 +15,10 @@ export class HeroeTarjetaComponent implements OnInit {
     this.heroeSeleccionado = new EventEmitter();
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   verHeroe() {
-    this.router.navigate( ['/heroe', this.index]);
+    this.router.navigate(['/heroe', this.index]);
     // this.heroeSeleccionado.emit( this.index );
   }
 }

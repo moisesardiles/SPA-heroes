@@ -78,15 +78,15 @@ export class HeroesService {
     termino = termino.toLowerCase();
 
     // tslint:disable-next-line: prefer-for-of
-    for ( let i = 0; i < this.heroes.length; i++ ) {
+    for (let i = 0; i < this.heroes.length; i++) {
 
       const heroe = this.heroes[i];
 
       const nombre = heroe.nombre.toLowerCase();
 
-      if (nombre.indexOf( termino ) >= 0) {
+      if (nombre.indexOf(termino) >= 0) {
         heroe.idx = i;
-        heroesArr.push( heroe );
+        heroesArr.push(heroe);
       }
     }
 

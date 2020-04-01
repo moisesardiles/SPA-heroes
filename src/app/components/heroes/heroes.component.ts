@@ -11,20 +11,19 @@ export class HeroesComponent implements OnInit {
 
   heroes: Heroe[] = [];
 
-  // tslint:disable-next-line: variable-name
-  constructor( private _heroesService: HeroesService,
-               private router: Router
-    ) {
-  // console.log('Constructor');
+  constructor(private _heroesService: HeroesService,
+    private router: Router
+  ) {
+    // console.log('Constructor');
   }
 
   ngOnInit() {
     this.heroes = this._heroesService.getHeroes();
-  // console.log( this.heroes );
+    // console.log( this.heroes );
   }
 
-  verHeroe( idx: number ) {
-    this.router.navigate( ['/heroe', idx]);
-}
+  verHeroe(idx: number) {
+    this.router.navigate(['/heroe', idx]);
+  }
 
 }
